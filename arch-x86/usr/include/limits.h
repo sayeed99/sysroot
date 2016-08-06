@@ -114,14 +114,13 @@
 
 #define MB_LEN_MAX 4
 
-/* New code should use sysconf(_SC_PAGE_SIZE) instead.
+/* New code should use sysconf(_SC_PAGE_SIZE) instead. */
 #ifndef PAGE_SIZE
 #define PAGE_SIZE 4096
 #endif
 #ifndef PAGESIZE
 #define  PAGESIZE  PAGE_SIZE
 #endif
-*/
 
 /* glibc's PAGE_MASK is the bitwise negation of BSD's! TODO: remove? */
 #define PAGE_MASK (~(PAGE_SIZE - 1))
